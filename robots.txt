@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# This tells Google exactly where your map is
+Sitemap: https://devchristian.vercel.app/sitemap.xml

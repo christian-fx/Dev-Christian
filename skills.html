@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta name="description" content="Skills & About - Akabueze Christian - Frontend Developer showcasing technical skills and personal interests">
+    <meta name="keywords" content="Frontend Developer, Web Developer, Skills, HTML, CSS, JavaScript, Portfolio">
+    <meta name="author" content="Akabueze Christian">
+    <title>Skills & About | Akabueze Christian - Frontend Developer</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/skills.css">
+    
+    <!-- External Resources -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#8B5CF6",
+                        "background-light": "#FFFFFF",
+                        "background-dark": "#111111",
+                        "text-light": "#111827",
+                        "text-secondary-light": "#6B7280",
+                        "text-dark": "#E5E7EB",
+                        "text-secondary-dark": "#9CA3AF",
+                        "border-light": "#E5E7EB",
+                        "border-dark": "#27272A",
+                    },
+                    fontFamily: {
+                        display: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                    },
+                },
+            },
+        };
+    </script>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark antialiased">
+    <div class="flex flex-col min-h-screen">
+        <!-- Header with responsive navigation -->
+        <header class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sticky top-0 bg-transparent z-30">
+            <nav class="flex justify-between items-center">
+                
+                <!-- Desktop Navigation - CENTERED & BOLD -->
+                <div class="hidden md:flex desktop-nav-container items-center space-x-8">
+                    <a href="index.html" class="nav-link relative py-2 text-text-light dark:text-text-dark hover:text-primary transition-colors desktop-nav-link">
+                        <span class="desktop-nav-text">Home</span>
+                        <span class="nav-indicator"></span>
+                    </a>
+                    <a href="projects.html" class="nav-link relative py-2 text-text-light dark:text-text-dark hover:text-primary transition-colors desktop-nav-link">
+                        <span class="desktop-nav-text">Projects</span>
+                        <span class="nav-indicator"></span>
+                    </a>
+                    <a href="skills.html" class="nav-link relative py-2 text-text-light dark:text-text-dark hover:text-primary transition-colors desktop-nav-link">
+                        <span class="desktop-nav-text">Skills</span>
+                        <span class="nav-indicator"></span>
+                    </a>
+                    <a href="contact.html" class="nav-link relative py-2 text-text-light dark:text-text-dark hover:text-primary transition-colors desktop-nav-link">
+                        <span class="desktop-nav-text">Contact</span>
+                        <span class="nav-indicator"></span>
+                    </a>
+                </div>
+                
+                <!-- Mobile Navigation in Header -->
+                <div class="md:hidden mobile-nav-container">
+                    <a href="index.html" class="mobile-nav-icon p-2 text-text-light dark:text-text-dark hover:text-primary transition-colors" aria-label="Home">
+                        <span class="material-icons-outlined text-2xl">home</span>
+                    </a>
+                    <a href="projects.html" class="mobile-nav-icon p-2 text-text-light dark:text-text-dark hover:text-primary transition-colors" aria-label="Projects">
+                        <span class="material-icons-outlined text-2xl">work</span>
+                    </a>
+                    <a href="skills.html" class="mobile-nav-icon p-2 text-text-light dark:text-text-dark hover:text-primary transition-colors" aria-label="Skills">
+                        <span class="material-icons-outlined text-2xl">build</span>
+                    </a>
+                    <a href="contact.html" class="mobile-nav-icon p-2 text-text-light dark:text-text-dark hover:text-primary transition-colors" aria-label="Contact">
+                        <span class="material-icons-outlined text-2xl">mail</span>
+                    </a>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Floating Theme Toggle for Mobile -->
+        <div class="md:hidden floating-theme-toggle">
+            <button class="text-text-light dark:text-text-dark hover:text-primary transition-colors" id="mobile-theme-toggle" aria-label="Toggle theme">
+                <span class="material-icons-outlined block dark:hidden">dark_mode</span>
+                <span class="material-icons-outlined hidden dark:block">light_mode</span>
+            </button>
+        </div>
+
+        <!-- Main Content -->
+        <main class="flex-grow">
+            <!-- Hero Section with Image Space -->
+            <section class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                <div class="text-center space-y-8 fade-in">
+                    <div class="flex justify-center">
+                        <div class="c-shape-container">
+                            <img src="images/profile.JPG" alt="Akabueze Christian - Frontend Developer" class="c-shape-image" loading="lazy">
+                        </div>
+                    </div>
+                    
+                    <!-- Name -->
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-text-light dark:text-text-dark tracking-tight">
+                         <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-400">I'm</span>
+                    Christian.</h1>
+                    
+                    <!-- Title -->
+                    <div class="space-y-4">
+                        <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-text-light dark:text-text-dark tracking-tight">
+                            Frontend <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-400">Developer.</span>
+                        </h1>
+                    </div>
+                    <p class="max-w-3xl mx-auto text-lg sm:text-xl text-text-secondary-light dark:text-text-secondary-dark leading-relaxed">
+                        A Frontend Developer passionate about creating innovative web solutions and user-friendly applications.
+                    </p>
+                </div>
+            </section>
+
+            <!-- About Me Section -->
+            <section class="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                <div class="bg-slate-50 dark:bg-slate-900/50 rounded-2xl p-8 fade-in">
+                    <h2 class="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-6 text-center">Beyond the Code</h2>
+                    <div class="prose prose-slate dark:prose-invert max-w-none text-center">
+                        <p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+                            When I'm not immersed in code, you'll find me exploring different worlds through PC gaming, 
+                            experimenting with new recipes in the kitchen, or analyzing market trends in forex trading. 
+                            These diverse interests fuel my creativity and problem-solving skills, which I bring to every project I work on.
+                        </p>
+                        
+                        <!-- Image Gallery -->
+                        <div class="my-8 relative">
+                            <div class="gallery-container overflow-hidden rounded-xl">
+                                <div class="gallery-track flex transition-transform duration-500 ease-in-out">
+                                    <!-- Gallery items will be added here by JavaScript -->
+                                </div>
+                            </div>
+                            
+                            <!-- Navigation Buttons -->
+                            <button class="gallery-prev absolute left-2 top-1/2 transform -translate-y-1/2 bg-slate-800/70 hover:bg-slate-900/80 text-white rounded-full p-2 transition-all" aria-label="Previous image">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                            <button class="gallery-next absolute right-2 top-1/2 transform -translate-y-1/2 bg-slate-800/70 hover:bg-slate-900/80 text-white rounded-full p-2 transition-all" aria-label="Next image">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                            
+                            <!-- Dots Indicator -->
+                            <div class="flex justify-center mt-4 space-x-2 gallery-dots">
+                                <!-- Dots will be added here by JavaScript -->
+                            </div>
+                        </div>
+                        
+                        <p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed mt-4">
+                            I believe that great development comes from understanding both technology and people. 
+                            Whether it's crafting the perfect user experience or predicting market movements, 
+                            I approach every challenge with analytical thinking and creative solutions.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                <div class="text-center space-y-4 mb-12 fade-in">
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-text-light dark:text-text-dark tracking-tight">
+                        My <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-400">Skills</span>
+                    </h1>
+                    <p class="max-w-2xl mx-auto text-lg text-text-secondary-light dark:text-text-secondary-dark">
+                        A comprehensive overview of my technical expertise and personal strengths
+                    </p>
+                </div>
+
+                <!-- Programming Languages -->
+                <div class="mb-16 fade-in">
+                    <h2 class="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-8 text-center">Programming Languages</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <!-- HTML -->
+                        <div class="skill-card bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl p-6 text-center">
+                            <div class="flex justify-center mb-4">
+                                <i class="devicon-html5-plain colored text-5xl" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-slate-100 mb-2">HTML5</h3>
+                            <p class="text-slate-600 dark:text-slate-400 mb-4">Semantic markup and modern HTML features</p>
+                            <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2">
+                                <div class="bg-orange-500 h-2 rounded-full progress-bar" style="width: 95%"></div>
+                            </div>
+                            <div class="text-right text-sm text-slate-500 dark:text-slate-400 mt-1">95%</div>
+                        </div>
+
+                        <!-- CSS -->
+                        <div class="skill-card bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl p-6 text-center">
+                            <div class="flex justify-center mb-4">
+                                <i class="devicon-css3-plain colored text-5xl" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-slate-100 mb-2">CSS3</h3>
+                            <p class="text-slate-600 dark:text-slate-400 mb-4">Advanced styling, animations and responsive design</p>
+                            <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2">
+                                <div class="bg-blue-500 h-2 rounded-full progress-bar" style="width: 90%"></div>
+                            </div>
+                            <div class="text-right text-sm text-slate-500 dark:text-slate-400 mt-1">90%</div>
+                        </div>
+
+                        <!-- JavaScript -->
+                        <div class="skill-card bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl p-6 text-center">
+                            <div class="flex justify-center mb-4">
+                                <i class="devicon-javascript-plain colored text-5xl" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-slate-100 mb-2">JavaScript</h3>
+                            <p class="text-slate-600 dark:text-slate-400 mb-4">Interactive features and modern ES6+ syntax</p>
+                            <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2">
+                                <div class="bg-yellow-500 h-2 rounded-full progress-bar" style="width: 85%"></div>
+                            </div>
+                            <div class="text-right text-sm text-slate-500 dark:text-slate-400 mt-1">85%</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools & Technologies -->
+                <div class="mb-16 fade-in">
+                    <h2 class="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-8 text-center">Tools & Technologies</h2>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                        <!-- Git -->
+                        <div class="skill-card bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl p-6 text-center">
+                            <div class="flex justify-center mb-4">
+                                <i class="devicon-git-plain colored text-5xl" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-slate-100 mb-2">Git</h3>
+                        </div>
+
+                        <!-- GitHub -->
+                        <div class="skill-card bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl p-6 text-center">
+                            <div class="flex justify-center mb-4">
+                                <i class="devicon-github-original colored text-5xl" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-slate-100 mb-2">GitHub</h3>
+                        </div>
+
+                        <!-- Figma -->
+                        <div class="skill-card bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl p-6 text-center">
+                            <div class="flex justify-center mb-4">
+                                <i class="devicon-figma-plain colored text-5xl" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-slate-100 mb-2">Figma</h3>
+                        </div>
+
+                        <!-- Canva -->
+                        <div class="skill-card bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl p-6 text-center">
+                            <div class="flex justify-center mb-4">
+                                <div class="w-12 h-12 bg-gradient-to-br from-blue-400 to-purple-600 rounded-lg flex items-center justify-center text-white font-bold text-sm">
+                                    Cn
+                                </div>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-slate-100 mb-2">Canva</h3>
+                        </div>
+
+                        <!-- Firebase -->
+                        <div class="skill-card bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl p-6 text-center">
+                            <div class="flex justify-center mb-4">
+                                <i class="devicon-firebase-plain colored text-5xl" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-slate-100 mb-2">Firebase</h3>
+                        </div>
+
+                        <!-- Tailwind CSS -->
+                        <div class="skill-card bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl p-6 text-center">
+                            <div class="flex justify-center mb-4">
+                                <i class="devicon-tailwindcss-plain colored text-5xl" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-slate-100 mb-2">Tailwind CSS</h3>
+                        </div>
+
+                        <!-- Vercel -->
+                        <div class="skill-card bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl p-6 text-center">
+                            <div class="flex justify-center mb-4">
+                                <svg class="w-12 h-12 text-black dark:text-white" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path d="M24 22.525H0l12-21.05 12 21.05z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-slate-100 mb-2">Vercel</h3>
+                        </div>
+
+                        <!-- GitHub Pages -->
+                        <div class="skill-card bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl p-6 text-center">
+                            <div class="flex justify-center mb-4">
+                                <i class="devicon-github-original text-5xl text-slate-700 dark:text-slate-300" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-slate-100 mb-2">GitHub Pages</h3>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Soft Skills -->
+                <div class="fade-in">
+                    <h2 class="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-8 text-center">Soft Skills & Interests</h2>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                        <!-- Problem Solving -->
+                        <div class="soft-skill-card bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl p-6 text-center">
+                            <div class="flex justify-center mb-4">
+                                <div class="soft-skill-icon w-12 h-12 bg-gradient-to-br from-green-500 to-blue-600 rounded-lg flex items-center justify-center text-white">
+                                    <span class="material-icons-outlined">psychology</span>
+                                </div>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-slate-100 mb-2">Problem Solving</h3>
+                        </div>
+
+                        <!-- Communication -->
+                        <div class="soft-skill-card bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl p-6 text-center">
+                            <div class="flex justify-center mb-4">
+                                <div class="soft-skill-icon w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg flex items-center justify-center text-white">
+                                    <span class="material-icons-outlined">chat</span>
+                                </div>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-slate-100 mb-2">Communication</h3>
+                        </div>
+
+                        <!-- Gaming -->
+                        <div class="soft-skill-card bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl p-6 text-center">
+                            <div class="flex justify-center mb-4">
+                                <div class="soft-skill-icon w-12 h-12 bg-gradient-to-br from-red-500 to-orange-600 rounded-lg flex items-center justify-center text-white">
+                                    <span class="material-icons-outlined">sports_esports</span>
+                                </div>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-slate-100 mb-2">Gaming</h3>
+                        </div>
+
+                        <!-- Cooking -->
+                        <div class="soft-skill-card bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl p-6 text-center">
+                            <div class="flex justify-center mb-4">
+                                <div class="soft-skill-icon w-12 h-12 bg-gradient-to-br from-amber-500 to-yellow-600 rounded-lg flex items-center justify-center text-white">
+                                    <span class="material-icons-outlined">restaurant</span>
+                                </div>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-slate-100 mb-2">Cooking</h3>
+                        </div>
+
+                        <!-- Forex Trading -->
+                        <div class="soft-skill-card bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl p-6 text-center">
+                            <div class="flex justify-center mb-4">
+                                <div class="soft-skill-icon w-12 h-12 bg-gradient-to-br from-emerald-500 to-green-600 rounded-lg flex items-center justify-center text-white">
+                                    <span class="material-icons-outlined">trending_up</span>
+                                </div>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-slate-100 mb-2">Forex Trading</h3>
+                        </div>
+
+                        <!-- Financial Analysis -->
+                        <div class="soft-skill-card bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl p-6 text-center">
+                            <div class="flex justify-center mb-4">
+                                <div class="soft-skill-icon w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center text-white">
+                                    <span class="material-icons-outlined">analytics</span>
+                                </div>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-slate-100 mb-2">Financial Analysis</h3>
+                        </div>
+
+                        <!-- Creativity -->
+                        <div class="soft-skill-card bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl p-6 text-center">
+                            <div class="flex justify-center mb-4">
+                                <div class="soft-skill-icon w-12 h-12 bg-gradient-to-br from-pink-500 to-rose-600 rounded-lg flex items-center justify-center text-white">
+                                    <span class="material-icons-outlined">palette</span>
+                                </div>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-slate-100 mb-2">Creativity</h3>
+                        </div>
+
+                        <!-- Adaptability -->
+                        <div class="soft-skill-card bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl p-6 text-center">
+                            <div class="flex justify-center mb-4">
+                                <div class="soft-skill-icon w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center text-white">
+                                    <span class="material-icons-outlined">autorenew</span>
+                                </div>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-slate-100 mb-2">Adaptability</h3>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Call to Action -->
+            <section class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <div class="bg-gradient-to-r from-primary to-purple-600 rounded-2xl p-8 text-center text-white">
+                    <h2 class="text-3xl font-bold mb-4">Ready to Work Together?</h2>
+                    <p class="text-lg mb-6 max-w-2xl mx-auto">
+                        Let's combine my technical skills and creative problem-solving to bring your next project to life.
+                    </p>
+                    <a href="contact.html" class="inline-flex items-center gap-2 bg-white text-primary font-bold py-3 px-6 rounded-lg hover:bg-opacity-90 transition-all transform hover:scale-105">
+                        <span>Start a Conversation</span>
+                        <span class="material-icons-outlined">arrow_forward</span>
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="w-full bg-slate-50 dark:bg-slate-900 border-t border-border-light dark:border-border-dark relative overflow-hidden">
+            <!-- Background decorative elements -->
+            <div class="absolute inset-0 opacity-5">
+                <div class="absolute top-10 left-10 w-20 h-20 bg-primary rounded-full blur-xl"></div>
+                <div class="absolute bottom-10 right-10 w-16 h-16 bg-purple-400 rounded-full blur-xl"></div>
+                <div class="absolute top-1/2 left-1/4 w-12 h-12 bg-green-400 rounded-full blur-lg"></div>
+            </div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- About -->
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3 mb-2">
+                            <div class="w-8 h-8 bg-gradient-to-br from-primary to-purple-400 rounded-lg flex items-center justify-center">
+                                <span class="text-white font-bold text-sm">AC</span>
+                            </div>
+                            <h2 class="text-lg font-bold text-text-light dark:text-text-dark">Dev. Christian</h2>
+                        </div>
+                        <p class="text-text-secondary-light dark:text-text-secondary-dark text-sm leading-relaxed">
+                            Frontend Developer passionate about creating innovative web solutions and user-friendly applications.
+                        </p>
+                        <div class="flex space-x-4">
+                            <a href="https://github.com/christian-fx" class="text-text-light dark:text-text-dark hover:text-primary transition-all duration-300 transform hover:scale-110 hover:-translate-y-1">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.337-3.369-1.337-.454-1.155-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.268 2.75 1.026A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.026 2.747-1.026.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.335-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/>
+                                </svg>
+                            </a>
+                            <a href="https://x.com/too_chi_?s=21" class="text-text-light dark:text-text-dark hover:text-primary transition-all duration-300 transform hover:scale-110 hover:-translate-y-1">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                                </svg>
+                            </a>
+                            <a href="https://wa.me/2347060789848" class="text-text-light dark:text-text-dark hover:text-primary transition-all duration-300 transform hover:scale-110 hover:-translate-y-1">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893-.001-3.189-1.262-6.189-3.553-8.436"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-semibold text-text-light dark:text-text-dark mb-4">Quick Links</h3>
+                        <div class="grid grid-cols-2 gap-2">
+                            <a href="index.html" class="group flex items-center text-text-secondary-light dark:text-text-secondary-dark hover:text-primary transition-all duration-300 text-sm py-1">
+                                <span class="w-1 h-1 bg-primary rounded-full opacity-0 group-hover:opacity-100 mr-2 transition-opacity duration-300"></span>
+                                Home
+                            </a>
+                            <a href="projects.html" class="group flex items-center text-text-secondary-light dark:text-text-secondary-dark hover:text-primary transition-all duration-300 text-sm py-1">
+                                <span class="w-1 h-1 bg-primary rounded-full opacity-0 group-hover:opacity-100 mr-2 transition-opacity duration-300"></span>
+                                Projects
+                            </a>
+                            <a href="index.html#skills" class="group flex items-center text-text-secondary-light dark:text-text-secondary-dark hover:text-primary transition-all duration-300 text-sm py-1">
+                                <span class="w-1 h-1 bg-primary rounded-full opacity-0 group-hover:opacity-100 mr-2 transition-opacity duration-300"></span>
+                                Skills
+                            </a>
+                            <a href="contact.html" class="group flex items-center text-text-secondary-light dark:text-text-secondary-dark hover:text-primary transition-all duration-300 text-sm py-1">
+                                <span class="w-1 h-1 bg-primary rounded-full opacity-0 group-hover:opacity-100 mr-2 transition-opacity duration-300"></span>
+                                Contact
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-semibold text-text-light dark:text-text-dark mb-4">Get In Touch</h3>
+                        <div class="space-y-3">
+                            <a href="https://wa.me/2347060789848" class="flex items-center gap-3 text-text-secondary-light dark:text-text-secondary-dark hover:text-primary transition-colors group text-sm">
+                                <div class="w-8 h-8 bg-green-100 dark:bg-green-900 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                                    <svg class="w-4 h-4 text-green-600 dark:text-green-400" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893-.001-3.189-1.262-6.189-3.553-8.436"/>
+                                    </svg>
+                                </div>
+                                <span>Lets Collaborate..</span>
+                            </a>
+                            <a href="mailto:akabuezechris432@gmail.com" class="flex items-center gap-3 text-text-secondary-light dark:text-text-secondary-dark hover:text-primary transition-colors group text-sm">
+                                <div class="w-8 h-8 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                                    <span class="material-icons-outlined text-blue-600 dark:text-blue-400 text-sm">mail</span>
+                                </div>
+                                <span>Send a Mail</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom Bar -->
+                <div class="border-t border-border-light dark:border-border-dark mt-8 pt-8 text-center">
+                    <p class="text-text-secondary-light dark:text-text-secondary-dark text-sm">
+                        © 2025 Christian. 
+                        All Rights Reserved.
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="js/theme.js" defer></script>
+    <script src="js/navigation.js" defer></script>
+    <script src="js/skills.js" defer></script>
+</body>
+</html>

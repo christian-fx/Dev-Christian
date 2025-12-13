@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta name="description" content="Projects showcase by Akabueze Christian - Frontend Developer">
+    <meta name="keywords" content="Frontend Developer, Web Developer, Portfolio, Projects, HTML, CSS, JavaScript">
+    <meta name="author" content="Akabueze Christian">
+    <title>Projects | Akabueze Christian - Frontend Developer</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/projects.css">
+    
+    <!-- External Resources -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#8B5CF6",
+                        "background-light": "#FFFFFF",
+                        "background-dark": "#111111",
+                        "text-light": "#111827",
+                        "text-secondary-light": "#6B7280",
+                        "text-dark": "#E5E7EB",
+                        "text-secondary-dark": "#9CA3AF",
+                        "border-light": "#E5E7EB",
+                        "border-dark": "#27272A",
+                    },
+                    fontFamily: {
+                        display: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                    },
+                },
+            },
+        };
+    </script>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark antialiased">
+    <div class="flex flex-col min-h-screen">
+        <!-- Header with responsive navigation -->
+        <header class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sticky top-0 bg-transparent z-30">
+            <nav class="flex justify-between items-center">
+                
+                <!-- Desktop Navigation - CENTERED -->
+                <div class="hidden md:flex desktop-nav-container items-center space-x-8">
+                    <a href="index.html" class="nav-link relative py-2 text-text-light dark:text-text-dark hover:text-primary transition-colors desktop-nav-link">
+                        <span class="desktop-nav-text">Home</span>
+                        <span class="nav-indicator"></span>
+                    </a>
+                    <a href="projects.html" class="nav-link relative py-2 text-text-light dark:text-text-dark hover:text-primary transition-colors desktop-nav-link">
+                        <span class="desktop-nav-text">Projects</span>
+                        <span class="nav-indicator"></span>
+                    </a>
+                    <a href="skills.html" class="nav-link relative py-2 text-text-light dark:text-text-dark hover:text-primary transition-colors desktop-nav-link">
+                        <span class="desktop-nav-text">Skills</span>
+                        <span class="nav-indicator"></span>
+                    </a>
+                    <a href="contact.html" class="nav-link relative py-2 text-text-light dark:text-text-dark hover:text-primary transition-colors desktop-nav-link">
+                        <span class="desktop-nav-text">Contact</span>
+                        <span class="nav-indicator"></span>
+                    </a>
+                </div>
+                
+                <!-- Mobile Navigation in Header -->
+                <div class="md:hidden mobile-nav-container">
+                    <a href="index.html" class="mobile-nav-icon p-2 text-text-light dark:text-text-dark hover:text-primary transition-colors" aria-label="Home">
+                        <span class="material-icons-outlined text-2xl">home</span>
+                    </a>
+                    <a href="projects.html" class="mobile-nav-icon p-2 text-text-light dark:text-text-dark hover:text-primary transition-colors" aria-label="Projects">
+                        <span class="material-icons-outlined text-2xl">work</span>
+                    </a>
+                    <a href="skills.html" class="mobile-nav-icon p-2 text-text-light dark:text-text-dark hover:text-primary transition-colors" aria-label="Skills">
+                        <span class="material-icons-outlined text-2xl">build</span>
+                    </a>
+                    <a href="contact.html" class="mobile-nav-icon p-2 text-text-light dark:text-text-dark hover:text-primary transition-colors" aria-label="Contact">
+                        <span class="material-icons-outlined text-2xl">mail</span>
+                    </a>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Floating Theme Toggle for Mobile -->
+        <div class="md:hidden floating-theme-toggle">
+            <button class="text-text-light dark:text-text-dark hover:text-primary transition-colors" id="mobile-theme-toggle" aria-label="Toggle theme">
+                <span class="material-icons-outlined block dark:hidden">dark_mode</span>
+                <span class="material-icons-outlined hidden dark:block">light_mode</span>
+            </button>
+        </div>
+
+        <!-- Main Content -->
+        <main class="flex-grow projects-page">
+            <!-- Projects Hero Section -->
+            <section class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                <div class="text-center space-y-6 fade-in">
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-text-light dark:text-text-dark tracking-tight">
+                        My <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-400">Projects</span>
+                    </h1>
+                    <p class="max-w-3xl mx-auto text-lg sm:text-xl text-text-secondary-light dark:text-text-secondary-dark leading-relaxed">
+                        A showcase of my recent work and creative endeavors. Each project represents a unique challenge and learning experience.
+                    </p>
+                    
+                    <!-- Project Filters -->
+                    <div class="flex flex-wrap justify-center gap-3 pt-6">
+                        <button class="filter-button active px-4 py-2 rounded-full bg-slate-100 dark:bg-slate-800 text-text-light dark:text-text-dark font-medium" data-filter="all" aria-pressed="true">
+                            All Projects
+                        </button>
+                        <button class="filter-button px-4 py-2 rounded-full bg-slate-100 dark:bg-slate-800 text-text-light dark:text-text-dark font-medium" data-filter="web">
+                            Web Applications
+                        </button>
+                        <button class="filter-button px-4 py-2 rounded-full bg-slate-100 dark:bg-slate-800 text-text-light dark:text-text-dark font-medium" data-filter="mobile">
+                            Mobile Focused
+                        </button>
+                        <button class="filter-button px-4 py-2 rounded-full bg-slate-100 dark:bg-slate-800 text-text-light dark:text-text-dark font-medium" data-filter="tool">
+                            Tools & Utilities
+                        </button>
+                        <button class="filter-button px-4 py-2 rounded-full bg-slate-100 dark:bg-slate-800 text-text-light dark:text-text-dark font-medium" data-filter="ecommerce">
+                            E-commerce
+                        </button>
+                        <button class="filter-button px-4 py-2 rounded-full bg-slate-100 dark:bg-slate-800 text-text-light dark:text-text-dark font-medium" data-filter="dashboard">
+                            Dashboards
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Grid -->
+            <section class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8" id="projects-grid">
+                    
+                       <!-- AcademiaTrack Project -->
+                    <div class="project-card fade-in" data-category="web tool">
+                        <div class="bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl p-6 flex flex-col h-full">
+                            <div class="mb-6 overflow-hidden rounded-lg flex-grow-0">
+                                <!-- Preview Image -->
+                                <div class="w-full h-48 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg">
+                                    <img src="images/AcademiaTrack.png" alt="Live preview of AcademiaTrack webpage" class="w-full h-full object-cover" loading="lazy">
+                                </div>
+                            </div>
+                            
+                            <div class="flex-grow">
+                                <div class="flex justify-between items-start mb-4">
+                                    <h2 class="text-2xl font-bold text-slate-900 dark:text-slate-100">AcademiaTrack | CGPA Calculator</h2>
+                                    <span class="inline-flex items-center gap-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 text-xs font-medium px-3 py-1 rounded-full">
+                                        <span class="w-2 h-2 bg-purple-500 rounded-full"></span>
+                                        Live
+                                    </span>
+                                </div>
+                                
+                                <p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
+                                    A web-based CGPA calculator that lets students calculate, track, and securely store their GPA online with Firebase integration for data persistence.
+                                </p>
+                                
+                                <!-- Key Features -->
+                                <div class="mb-6">
+                                    <h3 class="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-3">Key Features</h3>
+                                    <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400">
+                                        <li class="flex items-center gap-2">
+                                            <span class="material-icons-outlined text-primary text-sm">check_circle</span>
+                                            Real-time CGPA calculation
+                                        </li>
+                                        <li class="flex items-center gap-2">
+                                            <span class="material-icons-outlined text-primary text-sm">check_circle</span>
+                                            Firebase data storage
+                                        </li>
+                                        <li class="flex items-center gap-2">
+                                            <span class="material-icons-outlined text-primary text-sm">check_circle</span>
+                                            Progress tracking
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                                <!-- Technologies Used -->
+                                <div class="mb-6">
+                                    <h3 class="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-3">Technologies Used</h3>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="skill-badge inline-flex items-center gap-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs font-medium px-2.5 py-1 rounded-full">
+                                            <i class="devicon-html5-plain colored text-sm"></i>
+                                            HTML5
+                                        </span>
+                                        <span class="skill-badge inline-flex items-center gap-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs font-medium px-2.5 py-1 rounded-full">
+                                            <i class="devicon-css3-plain colored text-sm"></i>
+                                            CSS3
+                                        </span>
+                                        <span class="skill-badge inline-flex items-center gap-1 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 text-xs font-medium px-2.5 py-1 rounded-full">
+                                            <i class="devicon-javascript-plain colored text-sm"></i>
+                                            JavaScript
+                                        </span>
+                                        <span class="skill-badge inline-flex items-center gap-1 bg-cyan-100 dark:bg-cyan-900 text-cyan-800 dark:text-cyan-200 text-xs font-medium px-2.5 py-1 rounded-full">
+                                            <i class="devicon-tailwindcss-plain colored text-sm"></i>
+                                            Tailwind CSS
+                                        </span>
+                                        <span class="skill-badge inline-flex items-center gap-1 bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 text-xs font-medium px-2.5 py-1 rounded-full">
+                                            <i class="devicon-firebase-plain colored text-sm"></i>
+                                            Firebase
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Project Links -->
+                            <div class="flex items-center justify-between pt-4 border-t border-slate-200 dark:border-slate-700 mt-auto">
+                                <a href="https://academiatrack.vercel.app/" class="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all">
+                                    <span>View Live Project</span>
+                                    <span class="material-icons-outlined text-lg">arrow_forward</span>
+                                </a>
+                                <a href="https://github.com/christian-fx/AcademiaTrack." class="text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 transition-colors">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.337-3.369-1.337-.454-1.155-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.268 2.75 1.026A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.026 2.747-1.026.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.335-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- AgeScript Project -->
+                    <div class="project-card fade-in" data-category="tool">
+                        <div class="bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl p-6 flex flex-col h-full">
+                            <div class="mb-6 overflow-hidden rounded-lg flex-grow-0">
+                                <!-- Preview Image -->
+                                <div class="w-full h-48 bg-gradient-to-br from-green-500 to-blue-600 rounded-lg">
+                                    <img src="images/agescript.png" alt="Live preview of Agescript web Calculator" class="w-full h-full object-cover" loading="lazy">
+                                </div>
+                            </div>
+                            
+                            <div class="flex-grow">
+                                <div class="flex justify-between items-start mb-4">
+                                    <h2 class="text-2xl font-bold text-slate-900 dark:text-slate-100">AgeScript | Age Calculator</h2>
+                                    <span class="inline-flex items-center gap-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-xs font-medium px-3 py-1 rounded-full">
+                                        <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+                                        Live
+                                    </span>
+                                </div>
+                                
+                                <p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
+                                    An interactive Age Calculator built with HTML, CSS, and JavaScript. It allows users to enter their date of birth and instantly calculates their exact age in years, months, and days.
+                                </p>
+                                
+                                <!-- Key Features -->
+                                <div class="mb-6">
+                                    <h3 class="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-3">Key Features</h3>
+                                    <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400">
+                                        <li class="flex items-center gap-2">
+                                            <span class="material-icons-outlined text-primary text-sm">check_circle</span>
+                                            Real-time age calculation
+                                        </li>
+                                        <li class="flex items-center gap-2">
+                                            <span class="material-icons-outlined text-primary text-sm">check_circle</span>
+                                            User-friendly date picker
+                                        </li>
+                                        <li class="flex items-center gap-2">
+                                            <span class="material-icons-outlined text-primary text-sm">check_circle</span>
+                                            Responsive design
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                                <!-- Technologies Used -->
+                                <div class="mb-6">
+                                    <h3 class="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-3">Technologies Used</h3>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="skill-badge inline-flex items-center gap-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs font-medium px-2.5 py-1 rounded-full">
+                                            <i class="devicon-html5-plain colored text-sm"></i>
+                                            HTML5
+                                        </span>
+                                        <span class="skill-badge inline-flex items-center gap-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs font-medium px-2.5 py-1 rounded-full">
+                                            <i class="devicon-css3-plain colored text-sm"></i>
+                                            CSS3
+                                        </span>
+                                        <span class="skill-badge inline-flex items-center gap-1 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 text-xs font-medium px-2.5 py-1 rounded-full">
+                                            <i class="devicon-javascript-plain colored text-sm"></i>
+                                            JavaScript
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Project Links -->
+                            <div class="flex items-center justify-between pt-4 border-t border-slate-200 dark:border-slate-700 mt-auto">
+                                <a href="https://christian-fx.github.io/AgeScript/" class="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all">
+                                    <span>View Live Project</span>
+                                    <span class="material-icons-outlined text-lg">arrow_forward</span>
+                                </a>
+                                <a href="https://github.com/christian-fx/AgeScript" class="text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 transition-colors">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.337-3.369-1.337-.454-1.155-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.268 2.75 1.026A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.026 2.747-1.026.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.335-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                              
+                    <!-- FadeMaster Cuts Project -->
+                    <div class="project-card fade-in" data-category="web">
+                        <div class="bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl p-6 flex flex-col h-full">
+                            <div class="mb-6 overflow-hidden rounded-lg flex-grow-0">
+                                <!-- Preview Image -->
+                                <div class="w-full h-48 bg-gradient-to-br from-red-500 to-orange-600 rounded-lg">
+                                    <img src="images/fadedcuts.png" alt="Live Preview of FadeMaster Cuts Webpage" class="w-full h-full object-cover" loading="lazy">
+                                </div>
+                            </div>
+                            
+                            <div class="flex-grow">
+                                <div class="flex justify-between items-start mb-4">
+                                    <h2 class="text-2xl font-bold text-slate-900 dark:text-slate-100">FadeMaster Cuts | Barbershop</h2>
+                                    <span class="inline-flex items-center gap-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 text-xs font-medium px-3 py-1 rounded-full">
+                                        <span class="w-2 h-2 bg-red-500 rounded-full"></span>
+                                        Live
+                                    </span>
+                                </div>
+                                
+                                <p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
+                                    A fully responsive, professional barbershop website with modern design, service showcase, team introduction, and booking system.
+                                </p>
+                                
+                                <!-- Key Features -->
+                                <div class="mb-6">
+                                    <h3 class="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-3">Key Features</h3>
+                                    <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400">
+                                        <li class="flex items-center gap-2">
+                                            <span class="material-icons-outlined text-primary text-sm">check_circle</span>
+                                            Service showcase gallery
+                                        </li>
+                                        <li class="flex items-center gap-2">
+                                            <span class="material-icons-outlined text-primary text-sm">check_circle</span>
+                                            Team introduction section
+                                        </li>
+                                        <li class="flex items-center gap-2">
+                                            <span class="material-icons-outlined text-primary text-sm">check_circle</span>
+                                            Online booking system
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                                <!-- Technologies Used -->
+                                <div class="mb-6">
+                                    <h3 class="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-3">Technologies Used</h3>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="skill-badge inline-flex items-center gap-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs font-medium px-2.5 py-1 rounded-full">
+                                            <i class="devicon-html5-plain colored text-sm"></i>
+                                            HTML5
+                                        </span>
+                                        <span class="skill-badge inline-flex items-center gap-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs font-medium px-2.5 py-1 rounded-full">
+                                            <i class="devicon-css3-plain colored text-sm"></i>
+                                            CSS3
+                                        </span>
+                                        <span class="skill-badge inline-flex items-center gap-1 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 text-xs font-medium px-2.5 py-1 rounded-full">
+                                            <i class="devicon-javascript-plain colored text-sm"></i>
+                                            JavaScript
+                                        </span>
+                                        <span class="skill-badge inline-flex items-center gap-1 bg-cyan-100 dark:bg-cyan-900 text-cyan-800 dark:text-cyan-200 text-xs font-medium px-2.5 py-1 rounded-full">
+                                            <i class="devicon-tailwindcss-plain colored text-sm"></i>
+                                            Tailwind CSS
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Project Links -->
+                            <div class="flex items-center justify-between pt-4 border-t border-slate-200 dark:border-slate-700 mt-auto">
+                                <a href="https://christian-fx.github.io/FadeMaster-Cuts/" class="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all">
+                                    <span>View Live Project</span>
+                                    <span class="material-icons-outlined text-lg">arrow_forward</span>
+                                </a>
+                                <a href="https://github.com/christian-fx/FadeMaster-Cuts" class="text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 transition-colors">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.337-3.369-1.337-.454-1.155-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.268 2.75 1.026A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.026 2.747-1.026.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.335-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Portfolio Website -->
+                    <div class="project-card fade-in" data-category="web">
+                        <div class="bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl p-6 flex flex-col h-full">
+                            <div class="mb-6 overflow-hidden rounded-lg flex-grow-0">
+                                <!-- Preview Image -->
+                                <div class="w-full h-48 bg-gradient-to-br from-emerald-500 to-green-600 rounded-lg">
+                                    <img src="images/portfolio.png" alt="snap shot of my Portfolio" class="w-full h-full object-cover" loading="lazy">
+                                </div>
+                            </div>
+                            
+                            <div class="flex-grow">
+                                <div class="flex justify-between items-start mb-4">
+                                    <h2 class="text-2xl font-bold text-slate-900 dark:text-slate-100">Akabueze Christian| Portfolio Website</h2>
+                                    <span class="inline-flex items-center gap-1 bg-emerald-100 dark:bg-emerald-900 text-emerald-800 dark:text-emerald-200 text-xs font-medium px-3 py-1 rounded-full">
+                                        <span class="w-2 h-2 bg-emerald-500 rounded-full"></span>
+                                        Active
+                                    </span>
+                                </div>
+                                
+                                <p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
+                                    A modern, responsive portfolio website template with project showcase, skills section, and chatbot integration.
+                                </p>
+                                
+                                <!-- Key Features -->
+                                <div class="mb-6">
+                                    <h3 class="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-3">Key Features</h3>
+                                    <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400">
+                                        <li class="flex items-center gap-2">
+                                            <span class="material-icons-outlined text-primary text-sm">check_circle</span>
+                                            Responsive design
+                                        </li>
+                                        <li class="flex items-center gap-2">
+                                            <span class="material-icons-outlined text-primary text-sm">check_circle</span>
+                                            Project showcase gallery
+                                        </li>
+                                        <li class="flex items-center gap-2">
+                                            <span class="material-icons-outlined text-primary text-sm">check_circle</span>
+                                            Contact Chatbot integration
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                                <!-- Technologies Used -->
+                                <div class="mb-6">
+                                    <h3 class="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-3">Technologies Used</h3>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="skill-badge inline-flex items-center gap-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs font-medium px-2.5 py-1 rounded-full">
+                                            <i class="devicon-html5-plain colored text-sm"></i>
+                                            HTML5
+                                        </span>
+                                        <span class="skill-badge inline-flex items-center gap-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs font-medium px-2.5 py-1 rounded-full">
+                                            <i class="devicon-css3-plain colored text-sm"></i>
+                                            CSS3
+                                        </span>
+                                        <span class="skill-badge inline-flex items-center gap-1 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 text-xs font-medium px-2.5 py-1 rounded-full">
+                                            <i class="devicon-javascript-plain colored text-sm"></i>
+                                            JavaScript
+                                        </span>
+                                        <span class="skill-badge inline-flex items-center gap-1 bg-cyan-100 dark:bg-cyan-900 text-cyan-800 dark:text-cyan-200 text-xs font-medium px-2.5 py-1 rounded-full">
+                                            <i class="devicon-tailwindcss-plain colored text-sm"></i>
+                                            Tailwind CSS
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Project Links -->
+                            <div class="flex items-center justify-between pt-4 border-t border-slate-200 dark:border-slate-700 mt-auto">
+                                <a href="https://devchristian.vercel.app/" class="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all">
+                                    <span>View Live Project</span>
+                                    <span class="material-icons-outlined text-lg">arrow_forward</span>
+                                </a>
+                                <a href="https://github.com/christian-fx/Chris.is.a.dev" class="text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 transition-colors">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.337-3.369-1.337-.454-1.155-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.268 2.75 1.026A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.026 2.747-1.026.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.335-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- AutoSphere Project -->
+                    <div class="project-card fade-in" data-category="web">
+                        <div class="bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl p-6 flex flex-col h-full">
+                            <div class="mb-6 overflow-hidden rounded-lg flex-grow-0">
+                                <!-- Preview Image -->
+                                <div class="w-full h-48 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg">
+                                    <img src="images/autosphere.png" alt="Live preview of AutoSphere webpage" class="w-full h-full object-cover" loading="lazy">
+                                </div>
+                            </div>
+                            
+                            <div class="flex-grow">
+                                <div class="flex justify-between items-start mb-4">
+                                    <h2 class="text-2xl font-bold text-slate-900 dark:text-slate-100">AutoSphere | Car Dealership</h2>
+                                    <span class="inline-flex items-center gap-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs font-medium px-3 py-1 rounded-full">
+                                        <span class="w-2 h-2 bg-blue-500 rounded-full"></span>
+                                        Live
+                                    </span>
+                                </div>
+                                
+                                <p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
+                                    A responsive landing page for a car dealership built with HTML and CSS. Features include a vehicle showcase, customer testimonials, blog section, and a contact form.
+                                </p>
+                                
+                                <!-- Key Features -->
+                                <div class="mb-6">
+                                    <h3 class="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-3">Key Features</h3>
+                                    <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400">
+                                        <li class="flex items-center gap-2">
+                                            <span class="material-icons-outlined text-primary text-sm">check_circle</span>
+                                            Responsive vehicle showcase gallery
+                                        </li>
+                                        <li class="flex items-center gap-2">
+                                            <span class="material-icons-outlined text-primary text-sm">check_circle</span>
+                                            Customer testimonials section
+                                        </li>
+                                        <li class="flex items-center gap-2">
+                                            <span class="material-icons-outlined text-primary text-sm">check_circle</span>
+                                            Interactive contact form
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                                <!-- Technologies Used -->
+                                <div class="mb-6">
+                                    <h3 class="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-3">Technologies Used</h3>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="skill-badge inline-flex items-center gap-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs font-medium px-2.5 py-1 rounded-full">
+                                            <i class="devicon-html5-plain colored text-sm"></i>
+                                            HTML5
+                                        </span>
+                                        <span class="skill-badge inline-flex items-center gap-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs font-medium px-2.5 py-1 rounded-full">
+                                            <i class="devicon-css3-plain colored text-sm"></i>
+                                            CSS3
+                                        </span>
+                                        <span class="skill-badge inline-flex items-center gap-1 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 text-xs font-medium px-2.5 py-1 rounded-full">
+                                            <i class="devicon-javascript-plain colored text-sm"></i>
+                                            JavaScript
+                                        </span>
+                                        <span class="skill-badge inline-flex items-center gap-1 bg-cyan-100 dark:bg-cyan-900 text-cyan-800 dark:text-cyan-200 text-xs font-medium px-2.5 py-1 rounded-full">
+                                            <i class="devicon-tailwindcss-plain colored text-sm"></i>
+                                            Tailwind CSS
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Project Links -->
+                            <div class="flex items-center justify-between pt-4 border-t border-slate-200 dark:border-slate-700 mt-auto">
+                                <a href="https://christian-fx.github.io/AUTOSHPERE-2/" class="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all">
+                                    <span>View Live Project</span>
+                                    <span class="material-icons-outlined text-lg">arrow_forward</span>
+                                </a>
+                                <a href="https://github.com/christian-fx/AUTOSHPERE-2" class="text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 transition-colors">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.337-3.369-1.337-.454-1.155-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.268 2.75 1.026A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.026 2.747-1.026.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.335-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- NewsFlow Project -->
+                    <div class="project-card fade-in" data-category="web">
+                        <div class="bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl p-6 flex flex-col h-full">
+                            <div class="mb-6 overflow-hidden rounded-lg flex-grow-0">
+                                <!-- Preview Image -->
+                                <div class="w-full h-48 bg-gradient-to-br from-red-500 to-orange-600 rounded-lg">
+                                    <img src="images/news.png" alt="Live Preview of NewsFlow Webpage" class="w-full h-full object-cover" loading="lazy">
+                                </div>
+                            </div>
+                            
+                            <div class="flex-grow">
+                                <div class="flex justify-between items-start mb-4">
+                                    <h2 class="text-2xl font-bold text-slate-900 dark:text-slate-100">NewsFlow| Stay Updated </h2>
+                                    <span class="inline-flex items-center gap-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 text-xs font-medium px-3 py-1 rounded-full">
+                                        <span class="w-2 h-2 bg-red-500 rounded-full"></span>
+                                        Live
+                                    </span>
+                                </div>
+                                
+                                <p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
+                                   Modern news platform offering instant access to global headlines with clean, responsive design and intuitive navigation
+                                </p>
+                                
+                                <!-- Key Features -->
+                                <div class="mb-6">
+                                    <h3 class="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-3">Key Features</h3>
+                                    <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400">
+                                        <li class="flex items-center gap-2">
+                                            <span class="material-icons-outlined text-primary text-sm">check_circle</span>
+                                            News Cast Sections
+                                        </li>
+                                        <li class="flex items-center gap-2">
+                                            <span class="material-icons-outlined text-primary text-sm">check_circle</span>
+                                            Clean Topography and design
+                                        </li>
+                                        <li class="flex items-center gap-2">
+                                            <span class="material-icons-outlined text-primary text-sm">check_circle</span>
+                                            Mobile Responsive
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                                <!-- Technologies Used -->
+                                <div class="mb-6">
+                                    <h3 class="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-3">Technologies Used</h3>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="skill-badge inline-flex items-center gap-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs font-medium px-2.5 py-1 rounded-full">
+                                            <i class="devicon-html5-plain colored text-sm"></i>
+                                            HTML5
+                                        </span>
+                                        <span class="skill-badge inline-flex items-center gap-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs font-medium px-2.5 py-1 rounded-full">
+                                            <i class="devicon-css3-plain colored text-sm"></i>
+                                            CSS3
+                                        </span>
+                                        <span class="skill-badge inline-flex items-center gap-1 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 text-xs font-medium px-2.5 py-1 rounded-full">
+                                            <i class="devicon-javascript-plain colored text-sm"></i>
+                                            JavaScript
+                                        </span>
+                                        <span class="skill-badge inline-flex items-center gap-1 bg-cyan-100 dark:bg-cyan-900 text-cyan-800 dark:text-cyan-200 text-xs font-medium px-2.5 py-1 rounded-full">
+                                            <i class="devicon-tailwindcss-plain colored text-sm"></i>
+                                            Tailwind CSS
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Project Links -->
+                            <div class="flex items-center justify-between pt-4 border-t border-slate-200 dark:border-slate-700 mt-auto">
+                                <a href="https://christian-fx.github.io/NewsFlow/" class="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all">
+                                    <span>View Live Project</span>
+                                    <span class="material-icons-outlined text-lg">arrow_forward</span>
+                                </a>
+                                <a href="https://github.com/christian-fx/NewsFlow" class="text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 transition-colors">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.337-3.369-1.337-.454-1.155-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.268 2.75 1.026A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.026 2.747-1.026.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.335-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+              
+                    <!-- SynapseFlow Project -->
+                    <div class="project-card fade-in" data-category="web tool">
+                        <div class="bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl p-6 flex flex-col h-full">
+                            <div class="mb-6 overflow-hidden rounded-lg flex-grow-0">
+                                <!-- Preview Image -->
+                                <div class="w-full h-48 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg">
+                                    <img src="images/flow.png" alt="Live preview of SynapseFlow webpage" class="w-full h-full object-cover" loading="lazy">
+                                </div>
+                            </div>
+                            
+                            <div class="flex-grow">
+                                <div class="flex justify-between items-start mb-4">
+                                    <h2 class="text-2xl font-bold text-slate-900 dark:text-slate-100">SynapseFlow | AI-Powered Productivity Platform</h2>
+                                    <span class="inline-flex items-center gap-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 text-xs font-medium px-3 py-1 rounded-full">
+                                        <span class="w-2 h-2 bg-purple-500 rounded-full"></span>
+                                        Live
+                                    </span>
+                                </div>
+                                
+                                <p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
+                                   A modern, fully responsive landing page for a fictional AI-powered productivity tool called SynapseFlow. Built with pure HTML and CSS — no JavaScript required!
+                                </p>
+                                
+                                <!-- Key Features -->
+                                <div class="mb-6">
+                                    <h3 class="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-3">Key Features</h3>
+                                    <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400">
+                                        <li class="flex items-center gap-2">
+                                            <span class="material-icons-outlined text-primary text-sm">check_circle</span>
+                                            Pure CSS Implementation: No JavaScript dependencies
+                                        </li>
+                                        <li class="flex items-center gap-2">
+                                            <span class="material-icons-outlined text-primary text-sm">check_circle</span>
+                                           Fully Responsive: Mobile-first design with media queries 
+                                        </li>
+                                        <li class="flex items-center gap-2">
+                                            <span class="material-icons-outlined text-primary text-sm">check_circle</span>CSS-Only Interactions: Hover effects, transitions, and carousel
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                                <!-- Technologies Used -->
+                                <div class="mb-6">
+                                    <h3 class="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-3">Technologies Used</h3>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="skill-badge inline-flex items-center gap-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs font-medium px-2.5 py-1 rounded-full">
+                                            <i class="devicon-html5-plain colored text-sm"></i>
+                                            HTML5
+                                        </span>
+                                        <span class="skill-badge inline-flex items-center gap-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs font-medium px-2.5 py-1 rounded-full">
+                                            <i class="devicon-css3-plain colored text-sm"></i>
+                                            CSS3
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Project Links -->
+                            <div class="flex items-center justify-between pt-4 border-t border-slate-200 dark:border-slate-700 mt-auto">
+                                <a href="https://christian-fx.github.io/SynaspeFlow/" class="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all">
+                                    <span>View Live Project</span>
+                                    <span class="material-icons-outlined text-lg">arrow_forward</span>
+                                </a>
+                                <a href="https://github.com/christian-fx/SynaspeFlow" class="text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 transition-colors">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.337-3.369-1.337-.454-1.155-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.268 2.75 1.026A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.026 2.747-1.026.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.335-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                 
+                    <!-- E-commerce Mobile App -->
+                    <div class="project-card fade-in" data-category="mobile ecommerce">
+                        <div class="bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl p-6 flex flex-col h-full">
+                            <div class="mb-6 overflow-hidden rounded-lg flex-grow-0">
+                                <!-- Preview Image -->
+                                <div class="w-full h-48 bg-gradient-to-br from-teal-500 to-cyan-600 rounded-lg">
+                                    <img src="images/groccergo.png" alt="Live preview of Groccergo webpage" class="w-full h-full object-cover" loading="lazy">
+                                </div>
+                            </div>
+                            
+                            <div class="flex-grow">
+                                <div class="flex justify-between items-start mb-4">
+                                    <h2 class="text-2xl font-bold text-slate-900 dark:text-slate-100">GroccerGo | E-commerce Grocery Store App</h2>
+                                    <span class="inline-flex items-center gap-1 bg-teal-100 dark:bg-teal-900 text-teal-800 dark:text-teal-200 text-xs font-medium px-3 py-1 rounded-full">
+                                        <span class="w-2 h-2 bg-teal-500 rounded-full"></span>
+                                        In Development
+                                    </span>
+                                </div>
+                                
+                                <p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
+                                    A mobile-first e-commerce application with product catalog, shopping cart, and secure checkout system optimized for mobile devices.
+                                </p>
+                                
+                                <!-- Key Features -->
+                                <div class="mb-6">
+                                    <h3 class="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-3">Key Features</h3>
+                                    <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400">
+                                        <li class="flex items-center gap-2">
+                                            <span class="material-icons-outlined text-primary text-sm">check_circle</span>
+                                            Mobile-optimized product catalog
+                                        </li>
+                                        <li class="flex items-center gap-2">
+                                            <span class="material-icons-outlined text-primary text-sm">check_circle</span>
+                                            Secure payment integration
+                                        </li>
+                                        <li class="flex items-center gap-2">
+                                            <span class="material-icons-outlined text-primary text-sm">check_circle</span>
+                                            User account management
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                                <!-- Technologies Used -->
+                                <div class="mb-6">
+                                    <h3 class="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-3">Technologies Used</h3>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="skill-badge inline-flex items-center gap-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs font-medium px-2.5 py-1 rounded-full">
+                                            <i class="devicon-react-plain colored text-sm"></i>
+                                            React Native
+                                        </span>
+                                        <span class="skill-badge inline-flex items-center gap-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs font-medium px-2.5 py-1 rounded-full">
+                                            <i class="devicon-nodejs-plain colored text-sm"></i>
+                                            Node.js
+                                        </span>
+                                        <span class="skill-badge inline-flex items-center gap-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-xs font-medium px-2.5 py-1 rounded-full">
+                                            <i class="devicon-mongodb-plain colored text-sm"></i>
+                                            MongoDB
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Project Links -->
+                            <div class="flex items-center justify-between pt-4 border-t border-slate-200 dark:border-slate-700 mt-auto">
+                                <a href="#" class="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all">
+                                    <span>Coming Soon</span>
+                                    <span class="material-icons-outlined text-lg">arrow_forward</span>
+                                </a>
+                                <a href="#" class="text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 transition-colors">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.337-3.369-1.337-.454-1.155-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.268 2.75 1.026A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.026 2.747-1.026.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.335-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Data Analytics Dashboard -->
+                    <div class="project-card fade-in" data-category="dashboard tool">
+                        <div class="bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl p-6 flex flex-col h-full">
+                            <div class="mb-6 overflow-hidden rounded-lg flex-grow-0">
+                                <!-- Preview Image -->
+                                <div class="w-full h-48 bg-gradient-to-br from-indigo-500 to-blue-600 rounded-lg">
+                                    <img src="images/dashboard.png" alt="Live preview of an Admin dashboard" class="w-full h-full object-cover" loading="lazy">
+                                </div>
+                            </div>
+                            
+                            <div class="flex-grow">
+                                <div class="flex justify-between items-start mb-4">
+                                    <h2 class="text-2xl font-bold text-slate-900 dark:text-slate-100">GroccerGo | Admin Dashboard</h2>
+                                    <span class="inline-flex items-center gap-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-200 text-xs font-medium px-3 py-1 rounded-full">
+                                        <span class="w-2 h-2 bg-indigo-500 rounded-full"></span>
+                                        Live
+                                    </span>
+                                </div>
+                                
+                                <p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
+                                    An interactive data analytics dashboard with real-time data visualization, customizable reports, and advanced filtering capabilities.
+                                </p>
+                                
+                                <!-- Key Features -->
+                                <div class="mb-6">
+                                    <h3 class="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-3">Key Features</h3>
+                                    <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400">
+                                        <li class="flex items-center gap-2">
+                                            <span class="material-icons-outlined text-primary text-sm">check_circle</span>
+                                            Real-time data visualization
+                                        </li>
+                                        <li class="flex items-center gap-2">
+                                            <span class="material-icons-outlined text-primary text-sm">check_circle</span>
+                                            Customizable reporting
+                                        </li>
+                                        <li class="flex items-center gap-2">
+                                            <span class="material-icons-outlined text-primary text-sm">check_circle</span>
+                                            Advanced data filtering
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                                <!-- Technologies Used -->
+                                <div class="mb-6">
+                                    <h3 class="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-3">Technologies Used</h3>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="skill-badge inline-flex items-center gap-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs font-medium px-2.5 py-1 rounded-full">
+                                            <i class="devicon-html5-plain colored text-sm"></i>
+                                            HTML5
+                                        </span>
+                                        <span class="skill-badge inline-flex items-center gap-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs font-medium px-2.5 py-1 rounded-full">
+                                            <i class="devicon-css3-plain colored text-sm"></i>
+                                            CSS3
+                                        </span>
+                                        <span class="skill-badge inline-flex items-center gap-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs font-medium px-2.5 py-1 rounded-full">
+                                            <i class="devicon-d3js-plain colored text-sm"></i>
+                                            D3.js
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Project Links -->
+                            <div class="flex items-center justify-between pt-4 border-t border-slate-200 dark:border-slate-700 mt-auto">
+                                <a href="https://admindashboard-indol-alpha.vercel.app/" class="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all">
+                                    <span>View Live Project</span>
+                                    <span class="material-icons-outlined text-lg">arrow_forward</span>
+                                </a>
+                                <a href="https://github.com/christian-fx/Groccergo-Admin-Dashboard" class="text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 transition-colors">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.337-3.369-1.337-.454-1.155-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.268 2.75 1.026A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.026 2.747-1.026.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.335-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Task Management App -->
+                    <div class="project-card fade-in" data-category="web tool">
+                        <div class="bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl p-6 flex flex-col h-full">
+                            <div class="mb-6 overflow-hidden rounded-lg flex-grow-0">
+                                <!-- Preview Image -->
+                                <div class="w-full h-48 bg-gradient-to-br from-amber-500 to-orange-600 rounded-lg flex items-center justify-center text-white font-bold text-xl">
+                                    TaskFlow
+                                </div>
+                            </div>
+                            
+                            <div class="flex-grow">
+                                <div class="flex justify-between items-start mb-4">
+                                    <h2 class="text-2xl font-bold text-slate-900 dark:text-slate-100">TaskFlow | Productivity App</h2>
+                                    <span class="inline-flex items-center gap-1 bg-amber-100 dark:bg-amber-900 text-amber-800 dark:text-amber-200 text-xs font-medium px-3 py-1 rounded-full">
+                                        <span class="w-2 h-2 bg-amber-500 rounded-full"></span>
+                                        in development
+                                    </span>
+                                </div>
+                                
+                                <p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
+                                    A comprehensive task management application with project tracking, team collaboration features, and productivity analytics.
+                                </p>
+                                
+                                <!-- Key Features -->
+                                <div class="mb-6">
+                                    <h3 class="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-3">Key Features</h3>
+                                    <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400">
+                                        <li class="flex items-center gap-2">
+                                            <span class="material-icons-outlined text-primary text-sm">check_circle</span>
+                                            Project and task management
+                                        </li>
+                                        <li class="flex items-center gap-2">
+                                            <span class="material-icons-outlined text-primary text-sm">check_circle</span>
+                                            Team collaboration tools
+                                        </li>
+                                        <li class="flex items-center gap-2">
+                                            <span class="material-icons-outlined text-primary text-sm">check_circle</span>
+                                            Productivity analytics
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                                <!-- Technologies Used -->
+                                <div class="mb-6">
+                                    <h3 class="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-3">Technologies Used</h3>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="skill-badge inline-flex items-center gap-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs font-medium px-2.5 py-1 rounded-full">
+                                            <i class="devicon-vuejs-plain colored text-sm"></i>
+                                            Vue.js
+                                        </span>
+                                        <span class="skill-badge inline-flex items-center gap-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-xs font-medium px-2.5 py-1 rounded-full">
+                                            <i class="devicon-postgresql-plain colored text-sm"></i>
+                                            PostgreSQL
+                                        </span>
+                                        <span class="skill-badge inline-flex items-center gap-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs font-medium px-2.5 py-1 rounded-full">
+                                            <i class="devicon-nodejs-plain colored text-sm"></i>
+                                            Node.js
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Project Links -->
+                            <div class="flex items-center justify-between pt-4 border-t border-slate-200 dark:border-slate-700 mt-auto">
+                                <a href="#" class="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all">
+                                    <span>Coming soon..</span>
+                                    <span class="material-icons-outlined text-lg">arrow_forward</span>
+                                </a>
+                                <a href="#" class="text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 transition-colors">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.337-3.369-1.337-.454-1.155-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.268 2.75 1.026A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.026 2.747-1.026.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.335-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fitness Tracker -->
+                    <div class="project-card fade-in" data-category="mobile dashboard">
+                        <div class="bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl p-6 flex flex-col h-full">
+                            <div class="mb-6 overflow-hidden rounded-lg flex-grow-0">
+                                <!-- Preview Image -->
+                                <div class="w-full h-48 bg-gradient-to-br from-rose-500 to-pink-600 rounded-lg flex items-center justify-center text-white font-bold text-xl">
+                                    FitTrack
+                                </div>
+                            </div>
+                            
+                            <div class="flex-grow">
+                                <div class="flex justify-between items-start mb-4">
+                                    <h2 class="text-2xl font-bold text-slate-900 dark:text-slate-100">FitTrack | Fitness App</h2>
+                                    <span class="inline-flex items-center gap-1 bg-rose-100 dark:bg-rose-900 text-rose-800 dark:text-rose-200 text-xs font-medium px-3 py-1 rounded-full">
+                                        <span class="w-2 h-2 bg-rose-500 rounded-full"></span>
+                                        In Development
+                                    </span>
+                                </div>
+                                
+                                <p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
+                                    A comprehensive fitness tracking application with workout plans, progress monitoring, and social features for fitness enthusiasts.
+                                </p>
+                                
+                                <!-- Key Features -->
+                                <div class="mb-6">
+                                    <h3 class="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-3">Key Features</h3>
+                                    <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400">
+                                        <li class="flex items-center gap-2">
+                                            <span class="material-icons-outlined text-primary text-sm">check_circle</span>
+                                            Custom workout plans
+                                        </li>
+                                        <li class="flex items-center gap-2">
+                                            <span class="material-icons-outlined text-primary text-sm">check_circle</span>
+                                            Progress tracking dashboard
+                                        </li>
+                                        <li class="flex items-center gap-2">
+                                            <span class="material-icons-outlined text-primary text-sm">check_circle</span>
+                                            Social fitness challenges
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                                <!-- Technologies Used -->
+                                <div class="mb-6">
+                                    <h3 class="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-3">Technologies Used</h3>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="skill-badge inline-flex items-center gap-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs font-medium px-2.5 py-1 rounded-full">
+                                            <i class="devicon-flutter-plain colored text-sm"></i>
+                                            Flutter
+                                        </span>
+                                        <span class="skill-badge inline-flex items-center gap-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs font-medium px-2.5 py-1 rounded-full">
+                                            <i class="devicon-firebase-plain colored text-sm"></i>
+                                            Firebase
+                                        </span>
+                                        <span class="skill-badge inline-flex items-center gap-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs font-medium px-2.5 py-1 rounded-full">
+                                            <i class="devicon-dart-plain colored text-sm"></i>
+                                            Dart
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Project Links -->
+                            <div class="flex items-center justify-between pt-4 border-t border-slate-200 dark:border-slate-700 mt-auto">
+                                <a href="#" class="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all">
+                                    <span>Coming Soon</span>
+                                    <span class="material-icons-outlined text-lg">arrow_forward</span>
+                                </a>
+                                <a href="#" class="text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 transition-colors">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.337-3.369-1.337-.454-1.155-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.268 2.75 1.026A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.026 2.747-1.026.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.335-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Pagination -->
+                <div class="flex justify-center items-center space-x-2 mt-12" id="pagination-container">
+                    <!-- Pagination will be generated dynamically -->
+                </div>
+            </section>
+
+            <!-- Call to Action -->
+            <section class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <div class="bg-gradient-to-r from-primary to-purple-600 rounded-2xl p-8 text-center text-white">
+                    <h2 class="text-3xl font-bold mb-4">Have a Project in Mind?</h2>
+                    <p class="text-lg mb-6 max-w-2xl mx-auto">
+                        I'm always excited to work on new challenges and bring creative ideas to life. Let's discuss how we can work together on your next project.
+                    </p>
+                    <a href="contact.html" class="inline-flex items-center gap-2 bg-white text-primary font-bold py-3 px-6 rounded-lg hover:bg-opacity-90 transition-all transform hover:scale-105">
+                        <span>Start a Conversation</span>
+                        <span class="material-icons-outlined">arrow_forward</span>
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="w-full bg-slate-50 dark:bg-slate-900 border-t border-border-light dark:border-border-dark relative overflow-hidden">
+            <!-- Background decorative elements -->
+            <div class="absolute inset-0 opacity-5">
+                <div class="absolute top-10 left-10 w-20 h-20 bg-primary rounded-full blur-xl"></div>
+                <div class="absolute bottom-10 right-10 w-16 h-16 bg-purple-400 rounded-full blur-xl"></div>
+                <div class="absolute top-1/2 left-1/4 w-12 h-12 bg-green-400 rounded-full blur-lg"></div>
+            </div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- About -->
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3 mb-2">
+                            <div class="w-8 h-8 bg-gradient-to-br from-primary to-purple-400 rounded-lg flex items-center justify-center">
+                                <span class="text-white font-bold text-sm">AC</span>
+                            </div>
+                            <h2 class="text-lg font-bold text-text-light dark:text-text-dark">Dev. Christian</h2>
+                        </div>
+                        <p class="text-text-secondary-light dark:text-text-secondary-dark text-sm leading-relaxed">
+                            Frontend Developer passionate about creating innovative web solutions and user-friendly applications.
+                        </p>
+                        <div class="flex space-x-4">
+                            <a href="https://github.com/christian-fx" class="text-text-light dark:text-text-dark hover:text-primary transition-all duration-300 transform hover:scale-110 hover:-translate-y-1">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.337-3.369-1.337-.454-1.155-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.268 2.75 1.026A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.026 2.747-1.026.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.335-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/>
+                                </svg>
+                            </a>
+                            <a href="https://x.com/too_chi_?s=21" class="text-text-light dark:text-text-dark hover:text-primary transition-all duration-300 transform hover:scale-110 hover:-translate-y-1">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                                </svg>
+                            </a>
+                            <a href="https://wa.me/2347060789848" class="text-text-light dark:text-text-dark hover:text-primary transition-all duration-300 transform hover:scale-110 hover:-translate-y-1">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893-.001-3.189-1.262-6.189-3.553-8.436"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-semibold text-text-light dark:text-text-dark mb-4">Quick Links</h3>
+                        <div class="grid grid-cols-2 gap-2">
+                            <a href="index.html" class="group flex items-center text-text-secondary-light dark:text-text-secondary-dark hover:text-primary transition-all duration-300 text-sm py-1">
+                                <span class="w-1 h-1 bg-primary rounded-full opacity-0 group-hover:opacity-100 mr-2 transition-opacity duration-300"></span>
+                                Home
+                            </a>
+                            <a href="projects.html" class="group flex items-center text-text-secondary-light dark:text-text-secondary-dark hover:text-primary transition-all duration-300 text-sm py-1">
+                                <span class="w-1 h-1 bg-primary rounded-full opacity-0 group-hover:opacity-100 mr-2 transition-opacity duration-300"></span>
+                                Projects
+                            </a>
+                            <a href="skills.html" class="group flex items-center text-text-secondary-light dark:text-text-secondary-dark hover:text-primary transition-all duration-300 text-sm py-1">
+                                <span class="w-1 h-1 bg-primary rounded-full opacity-0 group-hover:opacity-100 mr-2 transition-opacity duration-300"></span>
+                                Skills
+                            </a>
+                            <a href="contact.html" class="group flex items-center text-text-secondary-light dark:text-text-secondary-dark hover:text-primary transition-all duration-300 text-sm py-1">
+                                <span class="w-1 h-1 bg-primary rounded-full opacity-0 group-hover:opacity-100 mr-2 transition-opacity duration-300"></span>
+                                Contact
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-semibold text-text-light dark:text-text-dark mb-4">Get In Touch</h3>
+                        <div class="space-y-3">
+                            <a href="https://wa.me/2347060789848" class="flex items-center gap-3 text-text-secondary-light dark:text-text-secondary-dark hover:text-primary transition-colors group text-sm">
+                                <div class="w-8 h-8 bg-green-100 dark:bg-green-900 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                                    <svg class="w-4 h-4 text-green-600 dark:text-green-400" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893-.001-3.189-1.262-6.189-3.553-8.436"/>
+                                    </svg>
+                                </div>
+                                <span>Lets Collaborate..</span>
+                            </a>
+                            <a href="mailto:akabuezechris432@gmail.com" class="flex items-center gap-3 text-text-secondary-light dark:text-text-secondary-dark hover:text-primary transition-colors group text-sm">
+                                <div class="w-8 h-8 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                                    <span class="material-icons-outlined text-blue-600 dark:text-blue-400 text-sm">mail</span>
+                                </div>
+                                <span>Send a Mail</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom Bar -->
+                <div class="border-t border-border-light dark:border-border-dark mt-8 pt-8 text-center">
+                    <p class="text-text-secondary-light dark:text-text-secondary-dark text-sm">
+                        © 2025 Christian. 
+                        All Rights Reserved.
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="js/theme.js" defer></script>
+    <script src="js/navigation.js" defer></script>
+    <script src="js/projects.js" defer></script>
+</body>
+</html>

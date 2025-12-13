@@ -1,0 +1,102 @@
+/* Skill cards animation */
+.skill-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.2);
+}
+
+/* Progress bars */
+.progress-bar {
+  transition: width 1s ease-in-out;
+}
+
+/* Soft skill icons */
+.soft-skill-icon {
+  transition: transform 0.3s ease;
+}
+
+.soft-skill-card:hover .soft-skill-icon {
+  transform: scale(1.1);
+}
+
+/* Image Gallery */
+.gallery-container {
+  height: 300px;
+}
+
+.gallery-track {
+  height: 100%;
+}
+
+.gallery-item {
+  flex: 0 0 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.75rem;
+}
+
+.gallery-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgb(148 163 184);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery-dot.active {
+  background-color: rgb(71 85 105);
+}
+
+.dark .gallery-dot {
+  background-color: rgb(100 116 139);
+}
+
+.dark .gallery-dot.active {
+  background-color: rgb(226 232 240);
+}
+
+@media (min-width: 768px) {
+  .gallery-container {
+    height: 350px;
+  }
+}
+
+/* Profile Image Container */
+.c-shape-container {
+  width: 300px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+}
+
+.c-shape-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid white;
+}
+
+@media (max-width: 480px) {
+  .c-shape-container {
+    width: 250px;
+    height: 350px;
+  }
+}
